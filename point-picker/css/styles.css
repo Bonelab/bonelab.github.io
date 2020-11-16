@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 32pt;
+}
+
+.point-picker-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+}
+
+.render-window {
+    width:  400px;
+}
+
+.controller {
+    flex: 2 1 20%
+}
