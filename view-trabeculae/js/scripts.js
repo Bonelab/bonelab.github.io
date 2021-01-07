@@ -31,4 +31,5 @@ function fetchData(url) {
         setReaderData(binary);
     });
 }
-fetchData('https://raw.githubusercontent.com/Bonelab/BonelabData/master/data/test25a.vtk')
+//fetchData('https://raw.githubusercontent.com/Bonelab/BonelabData/master/data/test25a.vtk')
+fetchData('https://raw.githubusercontent.com/Bonelab/BonelabData/master/data/tube.vtk')
