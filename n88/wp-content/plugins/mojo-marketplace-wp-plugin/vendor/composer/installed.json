@@ -1,0 +1,222 @@
+[
+    {
+        "name": "bluehost/endurance-wp-module-business-reviews",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bluehost/endurance-wp-module-business-reviews.git",
+            "reference": "05ecf887a98c95642ae845bafd7be5b609304763"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bluehost/endurance-wp-module-business-reviews/zipball/05ecf887a98c95642ae845bafd7be5b609304763",
+            "reference": "05ecf887a98c95642ae845bafd7be5b609304763",
+            "shasum": ""
+        },
+        "time": "2019-01-08T15:58:33+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "William Earnhardt",
+                "email": "william.earnhardt@endurance.com"
+            }
+        ],
+        "description": "Bluehost Business Reviews Integration"
+    },
+    {
+        "name": "bluehost/endurance-wp-module-gutenframe",
+        "version": "0.1.2",
+        "version_normalized": "0.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bluehost/endurance-wp-module-gutenframe.git",
+            "reference": "5affb465c83dcb8b8c77203e257c852d3d5aa8a5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bluehost/endurance-wp-module-gutenframe/zipball/5affb465c83dcb8b8c77203e257c852d3d5aa8a5",
+            "reference": "5affb465c83dcb8b8c77203e257c852d3d5aa8a5",
+            "shasum": ""
+        },
+        "require-dev": {
+            "bluehost/wp-php-standards": "^1.1"
+        },
+        "time": "2019-08-06T17:50:12+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ],
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "scripts": {
+            "lint": [
+                "vendor/bin/phpcs . --standard=Bluehost"
+            ],
+            "clean": [
+                "vendor/bin/phpcbf . --standard=Bluehost"
+            ]
+        },
+        "authors": [
+            {
+                "name": "David Ryan",
+                "email": "davidb.ryan@endurance.com"
+            }
+        ],
+        "description": "A solution for forcing the Block Editor fullscreen and preparing it for <iframe>-ing.",
+        "support": {
+            "source": "https://github.com/bluehost/endurance-wp-module-gutenframe/tree/master",
+            "issues": "https://github.com/bluehost/endurance-wp-module-gutenframe/issues"
+        }
+    },
+    {
+        "name": "bluehost/endurance-wp-module-loader",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bluehost/endurance-wp-module-loader.git",
+            "reference": "a9a384596e26950466f7ffc667e0be29f96c36a9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bluehost/endurance-wp-module-loader/zipball/a9a384596e26950466f7ffc667e0be29f96c36a9",
+            "reference": "a9a384596e26950466f7ffc667e0be29f96c36a9",
+            "shasum": ""
+        },
+        "time": "2019-01-08T16:32:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "includes/"
+            ],
+            "files": [
+                "module-loader.php"
+            ]
+        },
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Micah Wood",
+                "email": "micah@wpscholar.com"
+            }
+        ],
+        "description": "An Endurance module that handles registration and management of other modules."
+    },
+    {
+        "name": "bluehost/endurance-wp-module-spam-prevention",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bluehost/endurance-wp-module-spam-prevention.git",
+            "reference": "febcfebc931e38f8864a4ab9d36a39dbd2504e1a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bluehost/endurance-wp-module-spam-prevention/zipball/febcfebc931e38f8864a4ab9d36a39dbd2504e1a",
+            "reference": "febcfebc931e38f8864a4ab9d36a39dbd2504e1a",
+            "shasum": ""
+        },
+        "time": "2019-01-08T15:52:52+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Micah Wood",
+                "email": "micah@wpscholar.com"
+            }
+        ]
+    },
+    {
+        "name": "bluehost/endurance-wp-module-sso",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bluehost/endurance-wp-module-sso.git",
+            "reference": "71e24d9f07758e6ce93d4a11bbc66e523b643292"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bluehost/endurance-wp-module-sso/zipball/71e24d9f07758e6ce93d4a11bbc66e523b643292",
+            "reference": "71e24d9f07758e6ce93d4a11bbc66e523b643292",
+            "shasum": ""
+        },
+        "time": "2019-01-08T15:53:47+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Micah Wood",
+                "email": "micah@wpscholar.com"
+            }
+        ],
+        "description": "Bluehost Single Sign-on Integration"
+    },
+    {
+        "name": "xrstf/composer-php52",
+        "version": "v1.0.20",
+        "version_normalized": "1.0.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer-php52/composer-php52.git",
+            "reference": "bd41459d5e27df8d33057842b32377c39e97a5a8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer-php52/composer-php52/zipball/bd41459d5e27df8d33057842b32377c39e97a5a8",
+            "reference": "bd41459d5e27df8d33057842b32377c39e97a5a8",
+            "shasum": ""
+        },
+        "time": "2016-04-16T21:52:24+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-default": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "xrstf\\Composer52": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ]
+    }
+]

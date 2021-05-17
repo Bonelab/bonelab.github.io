@@ -1,0 +1,36 @@
+{
+    "name": "bluehost/endurance-wp-module-gutenframe",
+    "description": "A solution for forcing the Block Editor fullscreen and preparing it for <iframe>-ing.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "David Ryan",
+            "email": "davidb.ryan@endurance.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://satis.wpteamhub.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "files": [
+            "bootstrap.php"
+        ]
+    },
+    "require-dev": {
+        "bluehost/wp-php-standards": "^1.1"
+    },
+    "scripts": {
+        "lint": [
+            "vendor/bin/phpcs . --standard=Bluehost"
+        ],
+        "clean": [
+            "vendor/bin/phpcbf . --standard=Bluehost"
+        ]
+    }
+}

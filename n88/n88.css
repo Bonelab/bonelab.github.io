@@ -1,0 +1,65 @@
+/* Main containers */
+body {padding:0;
+      margin:0;
+      font:15px/26px 'Open Sans', Verdana, sans-serif;
+      background-color:#e4e4e4;
+      color:#333;
+      text-align:center;
+      line-height:1.6em;}
+
+#wrap {width:951px; text-align:left; margin:0 auto;}
+#menu {text-align:right;margin-top:-40px;}
+#content {background:#fff; text-align:left; padding:20px 20px 5px; margin:15px 0 15px 0;}
+
+/* HTML Tags */
+a {text-decoration:none; font-weight:400;}
+a:hover {text-decoration:underline;}
+a img {border:0;}
+h1 {margin:15px auto 10px auto; padding:0; font-size:2.0em; color:#2a7a9a; letter-spacing:-1px; line-height:1.2em;}
+h1 a {color:#2a7a9a; font-weight:500; text-decoration:none;}
+h1 a:hover {color:#333; text-decoration:none;}
+h2 {margin:0 0 12px 0; padding:10px 0; color:#2a7a9a; font-size:1.4em; font-weight:500; border-top: 1px solid #ddd; border-bottom:1px solid #ddd;}
+h2 a {font-weight:500;}
+h3 {font-size:1.4em; font-weight:400; margin:15px 0 0 0;}
+p {margin:0 0 15px 0;}
+ul {margin:0 0 15px 20px; padding:0;}
+li {margin: 0 20px 0 20px; padding:0;}
+code {margin:25px 25px 25px 25px;}
+
+/* Various classes */
+.slogan {color:#555; font-size:1.4em; margin:0 0 15px 0; padding:0;}
+.feature {border-top:2px solid #fff; border-bottom:2px solid #fff;}
+.menulinks {font-size:1.0em; line-height:1.9em; color:#555; margin:0 0 15px 0;}
+.menulink {padding:6px 8px 5px 8px; font-weight:400; margin:0 0 0 2px; color:#555;}
+.menulink:hover {background-color:#eee; color:#333; text-decoration:none;}
+.active {background-color:#2a7a9a; color:#fff;}
+.active:hover {background-color:#2a7a9a; color:#fff;}
+.footer{font-size:0.8em; clear:both; width:980px; line-height:1.4em; text-align:right; color:#888; font-weight:400; margin-bottom:10px;}
+.footer a {color:#888; font-weight:400; text-decoration:none; border-bottom: 1px dotted #aaa;}
+.left {float:left; width:49%;}
+.right {float:right; width:49%;}
+.centered {text-align:center;}
+.hide {display:none;}
+.clear {clear:both; width:980px; visibility:hidden;}
+.biography {font-size:0.9em; line-height:1.4em;}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table, th, td {
+    text-align: center;
+}
+
+td {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+    background-color: #4CAF50;
+    color: white;
+}
