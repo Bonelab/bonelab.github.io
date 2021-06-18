@@ -7932,7 +7932,7 @@ tweaked a couple of times.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>script_version = 3</pre>
+<pre>script_version = 4</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8010,7 +8010,7 @@ object to read it. That will look like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>print "Reading", args.input_file
+<pre>print(f"Reading, {args.input_file}")
 reader = vtk.vtkXMLImageDataReader()
 reader.SetFileName(args.input_file)
 reader.Update()
@@ -8054,10 +8054,10 @@ checking to stop things right here if that data wasn&#8217;t able to be read,</p
 <div class="listingblock">
 <div class="content">
 <pre>if not image:
-    print "No image data read."
+    print("No image data read.")
     sys.exit(1)
 
-print "Read image with dimensions", image.GetDimensions()</pre>
+print(f"Read image with point dimensions: {image.GetDimensions()}")</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8110,7 +8110,7 @@ in the generation of a well-defined finite element model.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>print "Applying connectivity filter."
+<pre>print("Applying connectivity filter.")
 connectivity_filter = vtkbone.vtkboneImageConnectivityFilter()
 connectivity_filter.SetExtractionModeToLargestRegion()
 connectivity_filter.SetInputData(image)
@@ -8163,8 +8163,7 @@ geometry_generator.SetInputData(image)
 geometry_generator.Update()
 geometry = geometry_generator.GetOutput()
 
-print "Generated %d elements and %d nodes." % \
-      (geometry.GetNumberOfCells(), geometry.GetNumberOfPoints())</pre>
+print(f"Generated {geometry.GetNumberOfCells()} elements and {geometry.GetNumberOfPoints()} nodes.")</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8203,7 +8202,7 @@ save the geometry to a file are as follows:</p>
 <div class="content">
 <pre>writer = vtk.vtkXMLUnstructuredGridWriter()
 geometry_file = "geometry.vtu"
-print "Writing geometry to", geometry_file
+print(f"Writing geometry to {geometry_file}")
 writer.SetFileName(geometry_file)
 writer.SetInputData(geometry)
 writer.Write()</pre>
@@ -8224,7 +8223,7 @@ by creating an instance of some specific derived class of
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>print "Creating a linear isotropic material."
+<pre>print("Creating a linear isotropic material.")
 material = vtkbone.vtkboneLinearIsotropicMaterial()
 material.SetName("linear_iso_material") <img src="./images/icons/callouts/1.png" alt="1">
 material.SetYoungsModulus(6829) <img src="./images/icons/callouts/2.png" alt="2">
@@ -8268,7 +8267,7 @@ mt_generator.SetMaterial(material)
 mt_generator.SetMaterialIdList(image.GetCellData().GetScalars()) <img src="./images/icons/callouts/1.png" alt="1">
 mt_generator.Update()
 material_table = mt_generator.GetOutput()
-print "Generated material table with %d entries." % material_table.GetNumberOfMaterials()</pre>
+print(f"Generated material table with {material_table.GetNumberOfMaterials()} entries.")</pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -8294,7 +8293,7 @@ the mesh and the material table that we defined above.</p>
 <div class="content">
 <pre># Apply a compression test (uniaxial)
 
-print "Applying a uniaxial compression test."
+print("Applying a uniaxial compression test.")
 generator = vtkbone.vtkboneApplyCompressionTest()
 generator.SetInputData(0, geometry) <img src="./images/icons/callouts/1.png" alt="1">
 generator.SetInputData(1, material_table) <img src="./images/icons/callouts/2.png" alt="2">
@@ -8333,7 +8332,7 @@ output_file = os.path.splitext(args.input_file)[0] + "_custom.n88model" <img src
 # Remove directory, so file ends up in current directory.
 output_file = os.path.split(output_file)[1]
 
-print "Writing n88model file:", output_file
+print(f"Writing n88model file: {output_file}")
 writer = vtkbone.vtkboneN88ModelWriter()
 writer.SetInputData(model)
 writer.SetFileName(output_file)
@@ -8390,7 +8389,7 @@ out the file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>model.AppendHistory("Created by apply_compression.py version %s ." % script_version)</pre>
+<pre>model.AppendHistory(f"Created by cube_compression.py version {script_version}.")</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8672,7 +8671,7 @@ numerical results obtained can be scaled to any beam width.</p>
 <div class="content">
 <pre># Optional: write out image data to examine it
 
-print ("Writing geometry file: beam_image.vti")
+print("Writing geometry file: beam_image.vti")
 writer = vtk.vtkXMLImageDataWriter()
 writer.SetInputData(image)
 writer.SetFileName("beam_image.vti")
@@ -8762,7 +8761,7 @@ saving and examining it.</p>
 <div class="content">
 <pre># Write an n88model file
 
-print "Writing n88model file:", args.output_file
+print(f"Writing n88model file: {args.output_file}")
 writer = vtkbone.vtkboneN88ModelWriter()
 writer.SetInputData(model)
 writer.SetFileName(args.output_file)
@@ -9149,13 +9148,14 @@ the model):</p>
 <div class="content">
 <pre># Update history and log
 
-model.AppendHistory("Created by create_cantilever.py version %s ." % script_version)
+model.AppendHistory(f"Created by create_cantilever.py version {script_version} .")
 
 model.AppendLog(
-"""create_cantilever.py
-Cantilever beam model with applied force on far face of %s .
-Using vtkbone version %s .
-""" % (args.applied_force, vtkbone.vtkboneVersion.GetVTKBONEVersion()))</pre>
+    f"""create_cantilever.py
+    Cantilever beam model with applied force on far face edge of {args.applied_force} .
+    Using vtkbone version {vtkbone.vtkboneVersion.GetvtkboneVersion()} .
+    """
+)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9744,7 +9744,7 @@ args = parser.parse_args()
 
 # Read existing model (including possible solution)
 
-print "Reading n88model file:", args.input_file
+print(f"Reading n88model file: {args.input_file}")
 reader = vtkbone.vtkboneN88ModelReader()
 reader.SetFileName (args.input_file)
 reader.Update()
@@ -9781,17 +9781,18 @@ modified file.</p>
 <div class="content">
 <pre># Update history and log
 
-model.AppendHistory("Modified modify_force.py version %s ." % script_version)
+model.AppendHistory(f"Modified modify_force.py version {script_version} .")
 
 model.AppendLog(
 """modify_force.py
-Changed applied force on far face edge to %s .
-Using VTKBONE version %s .
-""" % (args.applied_force, vtkbone.vtkboneVersion.GetVTKBONEVersion()))
+Changed applied force on far face edge to {args.applied_force} .
+Using vtkbone version {vtkbone.vtkboneVersion.GetvtkboneVersion()} .
+"""
+)
 
 # Write an n88model file
 
-print "Writing n88model file:", args.output_file
+print(f"Writing n88model file: {args.output_file}")
 writer = vtkbone.vtkboneN88ModelWriter()
 writer.SetInputData(model)
 writer.SetFileName(args.output_file)
@@ -10220,9 +10221,10 @@ lines.</p>
     The first argument is printed with a time stamp.
     Subsequent arguments are printed one to a line without a timestamp.
     """
-    print "%8.2f %s" % (time.time()-start_time, msg)
+    print(f"{(time.time()-start_time):8.2f} {msg}")
     for line in additionalLines:
-        print " " * 9 + line
+        print(" "*9 + line)
+
 start_time = time.time()</pre>
 </div>
 </div>
@@ -10288,7 +10290,7 @@ bone_constraint_max_depth = 1.5</pre>
 <p>A bit of code to get the configuration file name from the command line.</p>
 </li>
 <li>
-<p>One line to execute the configuration file as Python code.</p>
+<p>A few lines to execute the configuration file as Python code.</p>
 </li>
 <li>
 <p>Some lines to print out all the values that we expected to read in. This is very good practice so when you run it, you can verify that everything is as you expect.</p>
@@ -10301,14 +10303,16 @@ bone_constraint_max_depth = 1.5</pre>
 <div class="listingblock">
 <div class="content">
 <pre>if len(sys.argv) != 2:
-  print "Usage: python screwpullout.py example.conf"
+  print("Usage: python screwpullout.py example.conf")
   sys.exit(1)
 config_file = sys.argv[1]
 
 # Read in configuration file.
 message("Reading configuration file " + config_file)
 # Here we are actually executing it as python code.
-execfile(config_file)
+with open(config_file) as f:
+    code = compile(f.read(), config_file, 'exec')
+    exec(code)
 
 # Print out values that we read in.  This also has the effect of causing
 # this script to die if configuration values are missing (which is a good thing).
@@ -17598,7 +17602,7 @@ The PDF is generated by compiling asciidoc into DocBook
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-04-30 21:19:16 -0600
+Last updated 2021-06-18 12:47:47 -0600
 </div>
 </div>
 <script type="text/x-mathjax-config">
