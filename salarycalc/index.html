@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Salary Calculator</title>
+    <script type="text/javascript" src="js/formcalculations.js"></script>
+    <link href="css/salaryform.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="calculateSalary()">
+    <div id="wrap">
+        <div>
+            <div class="parameters">
+               <fieldset>
+                <legend>Department/Group Policy</legend>
+                  <ul>
+                    <li>
+                      <label for="min_stipend">Minimum Stipend</label>
+                      <input id="min_stipend" name="min_stipend" type="text" value="24000" oninput="calculateSalary()"/>
+                    </li>
+                    <li>
+                      <label for="min_suppl">Minimum Supplement</label>
+                      <input id="min_suppl" name="min_suppl" type="text" value="5000" oninput="calculateSalary()"/>
+                    </li>
+                    <li>
+                      <label for="perc_share">Percent Share</label>
+                      <input id="perc_share" name="perc_share" type="text" value="0.25" oninput="calculateSalary()"/>
+                    </li>
+                    <li>
+                      <label for="max">Maximum</label>
+                      <input id="max" name="max" type="text" value="50000" oninput="calculateSalary()"/>
+                    </li>
+                  </ul>
+                </fieldset>
+            </div>
+
+        	<div class="student">
+            	<fieldset>
+                <legend>Additional Income Details</legend>
+                <ul>
+                  <li>
+                    <label for="tot_awards">Total Awards (Annual)</label>
+                    <input id="tot_awards" name="tot_awards" type="text" value="0" oninput="calculateSalary()"/>
+                  </li>
+                  <li>
+                    <label for="tot_ta">Total TA Pay</label>
+                    <input id="tot_ta" name="tot_ta" type="text" value="0" oninput="calculateSalary()"/>
+                  </li>
+                </ul>
+                </fieldset>
+            </div>
+            <div class="salary">
+              	<fieldset>
+                  <legend>Salary Info</legend>
+                  <ul>
+                    <li>
+                      <label for="tot_ann_pay">Total Annual Pay</label>
+                      <input id="tot_ann_pay" name="tot_ann_pay" type="text" value="24000" readonly/>
+                    </li>
+                    <li>
+                      <label for="grant_supp_ann">Grant Supplement (Annual)</label>
+                      <input id="grant_supp_ann" name="grant_supp_ann" type="text" value="24000" readonly/>
+                    </li>
+                    <li>
+                      <label for="grant_supp_term">Grant Supplement (Term)</label>
+                      <input id="grant_supp_term" name="grant_supp_term" type="text" value="8000" readonly/>
+                    </li>
+                    <li>
+                      <label for="grant_supp_mon">Grant Supplement (Monthly)</label>
+                      <input id="grant_supp_mon" name="grant_supp_mon" type="text" value="2000" readonly/>
+                    </li>
+                  </ul>
+                  </fieldset>
+              </div>
+        </div>
+
+	</div><!--End of wrap-->
+
+</body>
+</html>

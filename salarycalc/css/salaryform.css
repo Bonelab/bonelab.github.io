@@ -1,0 +1,91 @@
+
+#wrap{
+	width:350px;
+	margin:0 auto;
+	text-align:left;
+	padding:5px;
+	background:#fff;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+	font-size:13px;
+    line-height:16px;
+}
+#wrap .parameters fieldset, .student fieldset, .salary fieldset{
+	margin:10px;
+	padding:5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+#wrap legend{
+	font-size:16px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#000;
+	font-weight:bold;
+    padding-bottom:10px;
+}
+#wrap .student input{
+	margin-bottom:10px;
+	color:#000;
+}
+
+}
+#wrap label{
+	display:block;
+	font-size:12px;
+	color:#000;
+    font-weight:bold;
+}
+#wrap label.inlinelabel
+{
+    display:inline;
+}
+#wrap .student input{
+	margin-bottom:5px;
+}
+#wrap .student p{
+	padding-top:5px;
+}
+
+#wrap input[type="text"]:hover,
+#wrap input[type="text"]:active {
+background-color: #FAF398;
+}
+
+#wrap input#calc
+{
+margin:10px;
+padding-left:20px;
+padding-right:20px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+ul{
+  width:325px;
+}
+
+li{
+    width:100%;
+    display:block;
+}
+
+li{
+    list-style:none;
+    clear:both;
+}
+
+li label{
+    float:left;
+}
+
+li input{
+    float:right;
+}
+
+.currencyinput {
+    border: 1px inset #ccc;
+}
+.currencyinput input {
+    border: 0;
+}
