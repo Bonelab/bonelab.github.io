@@ -11,7 +11,7 @@
         <div>
             <div class="parameters">
                <fieldset>
-                <legend>Department/Group Policy</legend>
+                <legend>1. Department/Group Policy</legend>
                   <ul>
                     <li>
                       <label for="min_stipend">Minimum Stipend</label>
@@ -35,10 +35,10 @@
 
         	<div class="student">
             	<fieldset>
-                <legend>Additional Income Details</legend>
+                <legend>2. Additional Income Details</legend>
                 <ul>
                   <li>
-                    <label for="tot_awards">Total Awards (Annual)</label>
+                    <label for="tot_awards">Total Awards</label>
                     <input id="tot_awards" name="tot_awards" type="text" value="0" oninput="calculateSalary()"/>
                   </li>
                   <li>
@@ -50,7 +50,7 @@
             </div>
             <div class="salary">
               	<fieldset>
-                  <legend>Salary Info</legend>
+                  <legend>3. Salary Info</legend>
                   <ul>
                     <li>
                       <label for="tot_ann_pay">Total Annual Pay</label>
@@ -75,21 +75,23 @@
                   <fieldset>
                     <legend>Instructions</legend>
                     <dl>
-                      <dt>Department/Group Policy</dt>
-                      <dd>Minimum Stipend: Enter the minimum annual stipend guaranteed to the student without any funding.</dd>
-                      <dd>Minimum Supplement: Enter the minimum amount of annual funding you will add to the student's stipend regardless of how much additional funding they get.</dd>
-                      <dd>Percent share: Enter the fraction of additional funding that goes directly to the student (remainder offsets funding you currently provide).</dd>
-                      <dd>Maximum: Enter the maximum annual funding the student can get. NOTE: Doesn't currently do anything.</dd>
+											<dt><b>Inputs</b> are lab policy in section #1 and trainee's awards and/or TA positions (if any) in section #2. <b>Output</b> is trainee salary in section #3.</dt>
+											<br>
+                      <dt><u>1. Department/Group Policy</u></dt>
+                      <dd><b>Minimum Stipend</b>: Minimum annual guaranteed stipend.</dd>
+                      <dd><b>Minimum Supplement</b>: Minimum supplement, regardless of total awards.</dd>
+                      <dd><b>Percent Share</b>: Fraction of additional funding to trainee; remainder offsets supervisor stipend.</dd>
+                      <dd><b>Maximum</b>: Absolute maximum annual funding the student can get. Note this is a placeholder and is not implemented.</dd>
                       <br>
-                      <dt>Additional Income Details</dt>
-                      <dd>Total Awards (Annual): Enter the total amount of additional annual funding the student has.</dd>
-                      <dd>Total TA Pay: Enter the amount of annual funding the student recieves from TA work.</dd>
+                      <dt><u>2. Additional Income Details</u></dt>
+                      <dd><b>Total Awards</b>: Total awards of trainee, entered pro-rated to annual amount.</dd>
+                      <dd><b>Total TA Pay</b>: Trainee income from TA work, entered pro-rated to annual amount.</dd>
                       <br>
-                      <dt>Salary Info</dt>
-                      <dd>** This section is calculated from the above sections **</dd>
-                      <dd>Total Annual Pay: The amount of total funding the student will recieve, between grant funding, awards, and TA pay.</dd>
-                      <dd>Grant Supplement (Annual/Term/Monthly): The amount you will need to supplement the student from grant funding on an annual, ter, or monthly basis.</dd>
+                      <dt><u>3. Salary Info</u></dt>
+                      <dd><b>Total Annual Pay</b>: Total trainee income including grant funding, awards, and TA pay.</dd>
+                      <dd><b>Grant Supplement (Annual/Term/Monthly)</b>: Amount of supplement to trainee from grant funding on an annual, term, or monthly basis.</dd>
                       <br>
+											<dt>Feedback? Contact us by <a href = "mailto:skboyd@ucalgary.ca?subject=Salary_calculator_feedback">email</a>.</dt>
                     </dl>
                     </fieldset>
                 </div>
