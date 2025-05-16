@@ -1,3 +1,3 @@
 # Bone Imaging Laboratory
 
-https:bonelab.ca
+https://bonelab.ca
