@@ -1,0 +1,11 @@
+<map id="vtkboneSelectVisiblePoints" name="vtkboneSelectVisiblePoints">
+<area shape="rect" id="Node000001" title="Selects points that are not obscured by a set of Polygons." alt="" coords="5,300,186,326"/>
+<area shape="rect" id="Node000002" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkPolyDataAlgorithm.html" title=" " alt="" coords="21,226,170,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,267,98,300,93,300,93,267"/>
+<area shape="rect" id="Node000003" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkAlgorithm.html" title=" " alt="" coords="48,153,143,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,194,98,226,93,226,93,194"/>
+<area shape="rect" id="Node000004" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkObject.html" title=" " alt="" coords="57,79,134,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,120,98,152,93,152,93,120"/>
+<area shape="rect" id="Node000005" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkObjectBase.html" title=" " alt="" coords="42,5,149,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="98,46,98,79,93,79,93,46"/>
+</map>

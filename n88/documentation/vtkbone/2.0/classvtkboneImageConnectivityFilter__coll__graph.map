@@ -1,0 +1,36 @@
+<map id="vtkboneImageConnectivityFilter" name="vtkboneImageConnectivityFilter">
+<area shape="rect" id="Node000001" title="mask regions of image data based on geometric connectivity" alt="" coords="632,529,808,570"/>
+<area shape="rect" id="Node000002" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkSimpleImageToImageFilter.html" title=" " alt="" coords="556,454,750,480"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="675,491,706,528,702,531,671,494"/>
+<area shape="rect" id="Node000003" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkImageAlgorithm.html" title=" " alt="" coords="604,377,734,403"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="666,419,658,455,653,454,661,418"/>
+<area shape="rect" id="Node000004" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkAlgorithm.html" title=" " alt="" coords="487,284,582,310"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="598,300,634,311,650,321,665,334,673,356,674,377,668,377,668,357,660,338,647,326,631,316,596,305"/>
+<area shape="rect" id="Node000012" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkExecutive.html" title=" " alt="" coords="439,377,536,403"/>
+<area shape="poly" id="edge16_Node000012_Node000004" title=" " alt="" coords="474,318,450,327,436,337,433,347,438,357,462,374,459,379,434,360,428,348,431,335,447,323,471,313"/>
+<area shape="rect" id="Node000005" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkObject.html" title=" " alt="" coords="516,94,593,120"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="589,127,617,150,641,181,651,202,658,221,657,240,647,260,634,273,618,283,583,295,581,290,615,278,631,269,643,256,652,238,652,222,646,204,636,184,613,154,585,131"/>
+<area shape="rect" id="Node000009" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkInformation.html" title=" " alt="" coords="354,183,458,208"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="522,130,429,184,426,180,519,125"/>
+<area shape="rect" id="Node000011" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkProgressObserver.html" title=" " alt="" coords="482,183,626,208"/>
+<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="557,135,557,182,552,182,552,135"/>
+<area shape="poly" id="edge15_Node000012_Node000005" title=" " alt="" coords="605,124,633,142,653,159,666,181,686,229,697,271,698,291,694,311,685,331,669,353,652,361,618,370,537,384,536,379,617,365,650,356,666,349,680,329,689,309,692,290,692,271,681,231,661,184,649,162,630,146,602,129"/>
+<area shape="rect" id="Node000013" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkInformationVector.html" title=" " alt="" coords="247,232,390,258"/>
+<area shape="poly" id="edge18_Node000013_Node000005" title=" " alt="" coords="501,117,463,125,421,138,380,158,344,184,329,208,323,233,317,231,325,206,340,181,377,153,419,133,461,120,500,112"/>
+<area shape="rect" id="Node000014" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkIdList.html" title=" " alt="" coords="736,232,807,258"/>
+<area shape="poly" id="edge20_Node000014_Node000005" title=" " alt="" coords="609,111,681,122,713,131,735,142,752,163,764,187,773,231,768,232,759,189,748,165,731,146,711,136,680,127,608,116"/>
+<area shape="rect" id="Node000006" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkObjectBase.html" title=" " alt="" coords="97,5,204,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="220,32,516,95,515,100,219,37"/>
+<area shape="rect" id="Node000007" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkWeakPointerBase.html" title=" " alt="" coords="5,94,149,120"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="92,41,76,56,72,75,75,93,70,94,66,75,71,54,88,37"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="105,82,119,68,143,30,147,33,123,72,109,86"/>
+<area shape="rect" id="Node000008" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkTimeStamp.html" title=" " alt="" coords="501,5,608,31"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="557,47,557,94,552,94,552,47"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="425,219,460,256,505,281,502,286,457,260,421,223"/>
+<area shape="rect" id="Node000010" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkInformationInternals.html" title=" " alt="" coords="173,94,328,120"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="287,125,386,180,383,184,284,130"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="542,223,539,233,535,260,536,284,530,284,530,260,533,232,537,221"/>
+<area shape="poly" id="edge14_Node000004_Node000012" title=" " alt="" coords="490,361,500,335,520,309,524,312,505,337,495,363"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="321,273,324,293,333,310,355,333,383,351,440,375,438,380,380,356,352,337,328,314,319,294,315,274"/>
+<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="781,272,787,305,790,342,790,469,787,487,778,504,752,531,748,527,774,501,782,486,785,468,785,342,782,306,776,273"/>
+</map>

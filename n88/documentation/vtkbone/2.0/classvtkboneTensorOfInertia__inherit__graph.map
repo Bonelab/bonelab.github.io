@@ -1,0 +1,9 @@
+<map id="vtkboneTensorOfInertia" name="vtkboneTensorOfInertia">
+<area shape="rect" id="Node000001" title="calculates the tensor of inertia." alt="" coords="5,226,162,252"/>
+<area shape="rect" id="Node000002" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkAlgorithm.html" title=" " alt="" coords="36,153,131,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,194,86,226,81,226,81,194"/>
+<area shape="rect" id="Node000003" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkObject.html" title=" " alt="" coords="45,79,122,105"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,120,86,152,81,152,81,120"/>
+<area shape="rect" id="Node000004" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkObjectBase.html" title=" " alt="" coords="30,5,137,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="86,46,86,79,81,79,81,46"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="vtkboneAIMWriter" name="vtkboneAIMWriter">
+<area shape="rect" id="Node000001" title="writes Scanco .aim files." alt="" coords="5,300,131,326"/>
+<area shape="rect" id="Node000002" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkWriter.html" title=" " alt="" coords="31,226,105,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,267,71,300,65,300,65,267"/>
+<area shape="rect" id="Node000003" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkAlgorithm.html" title=" " alt="" coords="21,153,115,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="71,194,71,226,65,226,65,194"/>
+<area shape="rect" id="Node000004" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkObject.html" title=" " alt="" coords="29,79,107,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="71,120,71,152,65,152,65,120"/>
+<area shape="rect" id="Node000005" href="/Users/skboyd/Desktop/numerics88/Faim/build/vtkbone/src/vtkbone-build/Utilities/Doxygen/vtkNightlyDoc.tag$classvtkObjectBase.html" title=" " alt="" coords="14,5,122,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="71,46,71,79,65,79,65,46"/>
+</map>
