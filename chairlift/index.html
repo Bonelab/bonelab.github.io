@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Ski Lift ETA Calculator</title>
+    <script type="text/javascript" src="js/formcalculations.js"></script>
+    <link href="css/liftform.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="initClock();loadChairliftDropdown();loadSkihillDropdown()">
+    <div id="wrap">
+        <div>
+            <div class="chairlift-details">
+               <fieldset>
+                 <legend>1. Chairlift Details</legend>
+                 <ul>
+                   <li>
+                     <label for="skihill_dropdown">Ski Hill</label>
+                     <select id="skihill_dropdown" name="skihill_dropdown" onchange="loadLiftNameDropdown()">
+                       <option value="">-- Select Ski Hill --</option>
+                     </select>
+                   </li>
+                   <li>
+                     <label for="lift_name_dropdown">Lift Name</label>
+                     <select id="lift_name_dropdown" name="lift_name_dropdown" onchange="displayLiftDetails()">
+                       <option value="">-- Select Lift --</option>
+                     </select>
+                   </li>
+                   <li>
+                     <label>Lift Type:</label>
+                     <span id="lift_type"></span>
+                   </li>
+                   <li>
+                     <label>Number of Lifts:</label>
+                     <span id="lift_num_lifts"></span>
+                   </li>
+                   <li>
+                     <label>People Per Lift:</label>
+                     <span id="lift_people_per_lift"></span>
+                   </li>
+                   <li>
+                     <label>Bottom Elevation:</label>
+                     <span id="lift_bottom_elevation"></span>
+                   </li>
+                   <li>
+                     <label>Top Elevation:</label>
+                     <span id="lift_top_elevation"></span>
+                   </li>
+                   <li>
+                     <label>Bullwheel Offset:</label>
+                     <span id="lift_bullwheel_offset"></span>
+                   </li>
+                   <li>
+                     <label>Chair Spacing:</label>
+                     <span id="lift_chair_spacing"></span>
+                   </li>
+                   <li>
+                     <label>Speed (lifts/sec):</label>
+                     <span id="lift_speed_per_sec"></span>
+                   </li>
+                 </ul>
+               </fieldset>
+            </div>
+
+            <div class="speed-calibration">
+               <fieldset>
+                 <legend>2. Speed Calibration</legend>
+                 <ul>
+                   <li>
+                     <span id="stopwatch_display" style="font-size: 1.5em;">00:00:00.0</span>
+                   </li>
+                   <li>
+                     <button type="button" id="toggle_btn" onclick="toggleStopwatch()">Start/Stop</button>
+                     <button type="button" id="reset_btn" onclick="resetStopwatch()">Reset</button>
+                   </li>
+                   <li>
+                     <label for="num_lifts_passing">Number of Lifts Passing</label>
+                     <select id="num_lifts_passing" name="num_lifts_passing">
+                       <option value="1" selected>1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       <option value="9">9</option>
+                       <option value="10">10</option>
+                     </select>
+                   </li>
+
+                   <li>
+                     <button type="button" id="accept_btn" onclick="calculateSecondsPerLift()">Accept</button>
+                   </li>
+
+                   <li>
+                     <label>Seconds Per Lift:</label>
+                     <span id="lifts_per_second" style="font-weight: bold;"></span>
+                   </li>
+
+                 </ul>
+               </fieldset>
+            </div>
+            <div class="estimate-arrival">
+               <fieldset>
+                 <legend>3. Estimated Time of Arrival</legend>
+                 <ul>
+                   <li>
+                     <label for="plan_time_display">Current Time:</label>
+                     <span id="plan_time_display">--:--:--</span>
+                   </li>
+                   <li>
+                     <label for="my_chair_dropdown">My Chair</label>
+                     <select id="my_chair_dropdown" name="my_chair_dropdown">
+                       <option value="1" selected>1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       <option value="9">9</option>
+                       <option value="10">10</option>
+                     </select>
+                   </li>
+                   <li>
+                     <label for="passing_chair_dropdown">Passing Chair</label>
+                     <select id="passing_chair_dropdown" name="passing_chair_dropdown">
+                       <option value="1" selected>1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       <option value="9">9</option>
+                       <option value="10">10</option>
+                     </select>
+                   </li>
+                   <li>
+                     <button type="button" id="go_btn" onclick="computeETAGo()">Go!</button>
+                     <span id="eta_result" style="margin-left:8px"></span>
+                   </li>
+                 </ul>
+               </fieldset>
+            </div>
+            
+              <div class="instructions">
+                <fieldset>
+                <legend>Instructions</legend>
+                <ol>
+                  <li>
+                  <strong>Select your ski hill and lift</strong>
+                  <ul>
+                    <li>Lift information will populate once selected.</li>
+                  </ul>
+                  <br>
+                  </li>
+                  <li>
+                  <strong>Calibrate your lift speed</strong>
+                  <ul>
+                    <li>Use the stopwatch to time how long it takes to pass oncoming chairs.</li>
+                    <li>Select the number of chairs you're timing (more chairs = more accuracy).</li>
+                    <li>Press <strong>Accept</strong> to update the chair speed.</li>
+                  </ul>
+                  </li>
+                  <br>
+                  <li>
+                  <strong>Plan your arrival</strong>
+                  <ul>
+                    <li>Set the chair you're on and the chair you're passing.</li>
+                    <li>Press <strong>GO</strong> to get your ETA.</li>
+                  </ul>
+                  <br>
+                  </li>
+                  <li>Questions? <a href="mailto:steve@wapta.ca?subject=Chairlift">Contact me</a></li>
+                </ol>
+                </fieldset>
+              </div>
+
+	</div><!--End of wrap-->
+
+<script type="text/javascript" src="js/chairlift_ui.js"></script>
+</body>
+</html>
+
