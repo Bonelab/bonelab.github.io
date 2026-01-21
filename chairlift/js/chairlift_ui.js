@@ -1,9 +1,9 @@
 // Allowed lift types
-const LIFT_TYPES = ['gondola', 'chairlift', 't-bar', 'platter'];
+const LIFT_TYPES = ['gondola', 'chairlift', 't-bar', 'carpet', 'platter'];
 
 // Lift Struct
 class Lift {
-    constructor(skihillName, liftName, numLifts, liftType, peoplePerLift, bottomElevation, topElevation, bullwheelOffset, chairSpacing, speedLiftPerSec) {
+    constructor(skihillName, liftName, numLifts, liftType, peoplePerLift, bottomElevation, topElevation, bullwheelOffset, chairSpacing, speedLift) {
         if (!LIFT_TYPES.includes(liftType)) {
             throw new Error(`Invalid liftType "${liftType}". Must be one of: ${LIFT_TYPES.join(', ')}`);
         }
@@ -14,20 +14,31 @@ class Lift {
         this.peoplePerLift = peoplePerLift;
         this.bottomElevation = bottomElevation;
         this.topElevation = topElevation;
+		//this.liftHeight = liftHeight;
+		//this.liftLength = liftLength;
+		//this.liftSpeed = liftSpeed;
         this.bullwheelOffset = bullwheelOffset;
         this.chairSpacing = chairSpacing;
-        this.speedLiftPerSec = speedLiftPerSec;
+        this.speedLift = speedLift;
     }
 }
 
 // Array of lifts
+// https://www.skiresort.info/ski-resort/lake-louise/ski-lifts/l87893/
+
 const lifts = [
     new Lift("Sunshine Village", "Village Gondola", 42, "gondola", 6, 2100, 2450, 1.2, 3.5, 0.8),
     new Lift("Sunshine Village", "Teepee Town LX", 38, "chairlift", 4, 2100, 2600, 1.5, 4.0, 1.2),
     new Lift("Lake Louise", "Glacier Express", 50, "chairlift", 4, 1650, 2250, 1.0, 3.2, 0.9),
-    new Lift("Lake Louise", "Summit", 72, "chairlift", 4, 1700, 2400, 1.0, 3.3, 0.92),
+    new Lift("Lake Louise", "Larch Express", 5, "chairlift", 4, 1650, 2250, 1.0, 3.2, 0.9),
+    new Lift("Lake Louise", "Summit Quad", 72, "chairlift", 4, 1700, 2400, 1.0, 3.3, 0.92),
     new Lift("Lake Louise", "Paradise", 140, "chairlift", 3, 2100, 2450, 1.2, 3.5, 0.8),
     new Lift("Lake Louise", "Ptarmigan", 135, "chairlift", 4, 2100, 2450, 1.2, 3.5, 0.8),
+    new Lift("Lake Louise", "Juniper Express", 6, "chairlift", 6, 2100, 2450, 1.2, 3.5, 0.8),
+    new Lift("Lake Louise", "Top of the World Express", 9, "chairlift", 6, 2100, 2450, 1.2, 3.5, 0.8),
+    new Lift("Lake Louise", "Pipestone Express", 73, "chairlift", 6, 2100, 2450, 1.2, 3.5, 0.8),
+    new Lift("Lake Louise", "Grizzly Express", 86, "gondola", 6, 2100, 2450, 1.2, 3.5, 0.8),
+    new Lift("Lake Louise", "Richardson\'s Ridge Express", 97, "chairlift", 6, 2100, 2450, 1.2, 3.5, 0.8),
     new Lift("Banff Norquay", "Mystic", 35, "chairlift", 2, 1650, 2130, 1.1, 3.4, 0.85),
     new Lift("Banff Norquay", "Cascade", 35, "chairlift", 2, 1650, 2130, 1.1, 3.4, 0.85),
     new Lift("Banff Norquay", "North American", 35, "chairlift", 2, 1650, 2130, 1.1, 3.4, 0.85),
@@ -109,30 +120,38 @@ function toggleStopwatch() {
 
 // Calculate seconds per lift from stopwatch time and number of lifts passing
 function calculateSecondsPerLift() {
-  const stopwatchEl = document.getElementById('stopwatch_display');
-  const numLiftsEl = document.getElementById('num_lifts_passing');
-  const resultEl = document.getElementById('lifts_per_second');
-  
-  if (!stopwatchEl || !numLiftsEl || !resultEl) return;
-  
-  // Get the elapsed time in milliseconds
-  const elapsedMs = _swElapsed;
-  const elapsedSeconds = elapsedMs / 1000;
-  
-  // Get number of lifts passing
-  const numLifts = parseInt(numLiftsEl.value) || 0;
-  
-  if (elapsedSeconds <= 0 || numLifts <= 0) {
-    alert('Please start the stopwatch and select number of lifts passing.');
-    resultEl.textContent = '';
-    return;
-  }
-  
+    const stopwatchEl = document.getElementById('stopwatch_display');
+    const numLiftsEl = document.getElementById('num_lifts_passing');
+    const resultEl = document.getElementById('lifts_per_second');
+    
+    if (!stopwatchEl || !numLiftsEl || !resultEl) return;
+    
+    // Get the elapsed time in milliseconds
+    const elapsedMs = _swElapsed;
+    const elapsedSeconds = elapsedMs / 1000;
+    
+    // Get number of lifts passing
+    const numLifts = parseInt(numLiftsEl.value) || 0;
+    
+    if (elapsedSeconds <= 0 || numLifts <= 0) {
+        alert('Please start the stopwatch and select number of lifts passing.');
+        resultEl.textContent = '';
+        return;
+    }
+    
     // Calculate seconds per lift (elapsed seconds divided by number of lifts)
     const secondsPerLift = elapsedSeconds / numLifts;
-  
+    
     // Display result with 3 decimal places
-    resultEl.textContent = `${secondsPerLift.toFixed(3)} seconds/lift`;
+    resultEl.textContent = `${secondsPerLift.toFixed(3)} s`;
+
+    // Update current lift's speedLift with the calculated seconds per lift
+    const lift = window.currentLift;
+    if (lift) {
+        lift.speedLift = secondsPerLift;
+        const liftSpeedEl = document.getElementById('lift_speed');
+        if (liftSpeedEl) liftSpeedEl.textContent = lift.speedLift;
+    }
 }
 
 // Lift management functions
@@ -258,7 +277,7 @@ function displayLiftDetails() {
         'lift_top_elevation': lift.topElevation,
         'lift_bullwheel_offset': lift.bullwheelOffset,
         'lift_chair_spacing': lift.chairSpacing,
-        'lift_speed_per_sec': lift.speedLiftPerSec
+        'lift_speed': lift.speedLift
     };
     
     Object.entries(fields).forEach(([id, value]) => {
@@ -274,7 +293,7 @@ function displayLiftDetails() {
 function clearLiftDetails() {
     const fields = [
         'lift_num_lifts', 'lift_type', 'lift_people_per_lift', 'lift_bottom_elevation',
-        'lift_top_elevation', 'lift_bullwheel_offset', 'lift_chair_spacing', 'lift_speed_per_sec'
+        'lift_top_elevation', 'lift_bullwheel_offset', 'lift_chair_spacing', 'lift_speed'
     ];
     fields.forEach(id => {
         const el = document.getElementById(id);
@@ -323,12 +342,12 @@ function calculateArrivalTime(myChair, passingChair, liftSpeed, numLifts) {
     }
     
     // Calculate chairs between my and passing (forward direction)
-    let chairsBetween = pass - my;
-    if (chairsBetween < 0) chairsBetween = (pass + total) - my;
+    let chairsBetween = my - pass;
+    if (chairsBetween < 0) chairsBetween = (my + total) - pass;
     // If same chair, treat as full loop
     if (chairsBetween === 0) chairsBetween = total;
     
-    const seconds = chairsBetween / speed;
+    const seconds = chairsBetween * speed / 2;
     const arrivalTime = new Date(Date.now() + Math.round(seconds * 1000));
     
     return {
@@ -349,7 +368,7 @@ function computeETAGo() {
     const lift = window.currentLift;
     if (!lift) { alert('No lift selected.'); if(resultEl) resultEl.textContent=''; return; }
     const total = Number(lift.numLifts) || 0;
-    const speed = Number(lift.speedLiftPerSec) || 0;
+    const speed = Number(lift.speedLift) || 0;
     if (total <= 0 || speed <= 0) { alert('Lift data incomplete (num lifts or speed).'); if(resultEl) resultEl.textContent=''; return; }
     
     // Use the new calculateArrivalTime function
