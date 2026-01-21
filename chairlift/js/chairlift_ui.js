@@ -273,11 +273,11 @@ function displayLiftDetails() {
         'lift_num_lifts': lift.numLifts,
         'lift_type': lift.liftType,
         'lift_people_per_lift': lift.peoplePerLift,
-        'lift_bottom_elevation': lift.bottomElevation,
-        'lift_top_elevation': lift.topElevation,
-        'lift_bullwheel_offset': lift.bullwheelOffset,
-        'lift_chair_spacing': lift.chairSpacing,
-        'lift_speed': lift.speedLift
+        'lift_bottom_elevation': `${lift.bottomElevation} m`,
+        'lift_top_elevation': `${lift.topElevation} m`,
+        'lift_bullwheel_offset': `${lift.bullwheelOffset} m`,
+        'lift_chair_spacing': `${lift.chairSpacing} m`,
+        'lift_speed': `${lift.speedLift} s`
     };
     
     Object.entries(fields).forEach(([id, value]) => {
