@@ -65,10 +65,10 @@
                <fieldset>
                  <legend>2. Speed Calibration</legend>
                  <ul>
-                   <li>
+                   <li style="display: block; text-align: center; padding: 10px 0; border: none;">
                      <span id="stopwatch_display" style="font-size: 1.5em;">00:00:00.0</span>
                    </li>
-                   <li>
+                   <li style="display: block; text-align: center; padding: 10px 0; border: none;">
                      <button type="button" id="toggle_btn" onclick="toggleStopwatch()">Start/Stop</button>
                      <button type="button" id="reset_btn" onclick="resetStopwatch()">Reset</button>
                    </li>
@@ -88,12 +88,12 @@
                      </select>
                    </li>
 
-                   <li>
+                   <li style="display: block; text-align: center; padding: 10px 0; border: none;">
                      <button type="button" id="accept_btn" onclick="calculateSecondsPerLift()">Accept</button>
                    </li>
 
                    <li>
-                     <label>Seconds Per Lift:</label>
+                     <label>Time per Lift:</label>
                      <span id="lifts_per_second" style="font-weight: bold;"></span>
                    </li>
 
@@ -140,7 +140,9 @@
                    </li>
                    <li>
                      <button type="button" id="go_btn" onclick="computeETAGo()">Go!</button>
-                     <span id="eta_result" style="margin-left:8px"></span>
+                   </li>
+                   <li style="display: block; text-align: center; padding: 15px 0 5px 0; border: none;">
+                     <span id="eta_result"></span>
                    </li>
                  </ul>
                </fieldset>

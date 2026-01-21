@@ -12,11 +12,13 @@
 #wrap .chairlift-details fieldset, .speed-calibration fieldset, .estimate-arrival fieldset, .instructions fieldset {
 	width:400px;
 	margin:10px;
-	padding:5px;
+	padding:15px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
+    border: 2px solid #ddd;
+    background-color: #fafafa;
 }
 #wrap legend{
 	font-size:16px;
@@ -83,10 +85,179 @@ li input{
     float:right;
 }
 
+/* Consistent styling for all list items in all fieldsets */
+.chairlift-details ul li,
+.speed-calibration ul li,
+.estimate-arrival ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.chairlift-details ul li:last-child,
+.speed-calibration ul li:last-child,
+.estimate-arrival ul li:last-child {
+    border-bottom: none;
+}
+
+.chairlift-details ul li label,
+.speed-calibration ul li label,
+.estimate-arrival ul li label {
+    font-weight: bold;
+    color: #333;
+    flex: 0 0 auto;
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+.chairlift-details ul li span,
+.speed-calibration ul li span,
+.estimate-arrival ul li span {
+    color: #666;
+    text-align: right;
+    font-weight: normal;
+}
+
+.chairlift-details ul li select,
+.speed-calibration ul li select,
+.estimate-arrival ul li select {
+    flex: 1;
+    max-width: 200px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: white;
+}
+
+.chairlift-details ul li select:hover,
+.speed-calibration ul li select:hover,
+.estimate-arrival ul li select:hover {
+    border-color: #999;
+}
+
+.chairlift-details ul li select:focus,
+.speed-calibration ul li select:focus,
+.estimate-arrival ul li select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
 .currencyinput {
     border: 1px inset #ccc;
 }
 .currencyinput input {
     border: 0;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+#reset_btn {
+    background-color: #f44336;
+    margin-left: 8px;
+}
+
+#reset_btn:hover {
+    background-color: #da190b;
+}
+
+/* Prominent ETA Result Styling */
+#eta_result {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    margin-left: 0;
+    margin-top: 10px;
+    min-width: 250px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#eta_result:empty {
+    display: none;
+}
+
+/* Go button special styling */
+#go_btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+#go_btn:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+/* Stopwatch display styling */
+#stopwatch_display {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8em !important;
+    font-weight: bold;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* Speed calibration result */
+#lifts_per_second {
+    font-size: 15px !important;
+    color: #4CAF50 !important;
+    font-weight: bold !important;
+}
+
+/* Make the ETA section's button container flex for better layout */
+.estimate-arrival ul li {
+    flex-wrap: wrap;
+}
+
+.estimate-arrival ul li button {
+    margin-bottom: 10px;
 }
 
